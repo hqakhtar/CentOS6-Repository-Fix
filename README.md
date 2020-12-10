@@ -14,6 +14,13 @@ OR
 ```
 In the first option, all files CentOS.*repo files will be moved to "/etc/yum.repos.d/old_repos" folder, whereas in the second one, all files will be moved to "/etc/yum.repos.d/unwanted_repos".
 
+**Dockers:**
+
+At the start of a CentOS6 based docker file, I've added these two lines:
+```
+COPY    centos6_repo_fix.sh /tmp/
+RUN     /tmp/centos6_repo_fix.sh
+```
 
 **NOTE:**
 
